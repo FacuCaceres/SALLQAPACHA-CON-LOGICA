@@ -1,164 +1,90 @@
 
-/*GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway&display=swap');
-/* VARIABLES CSS */
-:root {
-    --header-height: 3rem;
-
-/* COLORS */
-    --hue-color: 51;
-
-    /* HSL color mode */
-    --first-color: hsl(var(--hue-color), 70%, 61%);
-    --dark-color: #ffc517;
-    --dark-color-alt: #ffa217;
-    --white-color: #ffffff;
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
-    --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #fff;
-
-    /* Fuente y tipografia */
-    --body-font: 'Poppins', sans-serif;
-
-    --big-font-size: 2rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .988rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-
-    /* Font weight */
-    --font-medium: 500;
-    --font-semi-bold: 600;
-
-    /* Margen Bottom */
-    --mb-0-25: .25rem;
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-    --mb-3: 3rem;
-
-    /* Z INDEX */
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-modal: 1000;
+body {
+    font-family: 'Titillium Web', sans-serif;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: var(--body-font);
+.tit {
+    font-size: 40px;
+    color: rgb(53, 56, 50);
 }
-
-
-.header{
-    background: #ffc517;
-}
-
-.img {
-    
-    width: 300px;
-}
-
-.header nav{
-    display: flex;
-    justify-content: flex-start;
-    padding: 0 20px;
-    padding-left: var(--mb-2-5);
-}
-
-.nav__perfil{
-    display: flex;
-    align-items:center;
-}
-
-.salqua{
-    color: var(--white-color);
-    display: flex;
-}
-.sallqa{
-    color: var(--white-color);
-    display: flex;
-    text-shadow: 2px;
-}
-.header nav ul{
-    list-style: none;
-}
-
-
-a{
+.tit:hover {
+    color:rgb(92, 77, 59);
     text-decoration: none;
-    font-size: var(--normal-font-size);
-    color: var(--white-color);
-    display: block;
-    padding: 14px 22px;
-    display: block;
-}
-
-a:hover{
-    background: rgb(44, 44, 44);
-}
-
-.header nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-}
-
-.header nav ul li ul{
-    flex-direction: column;
-    justify-content: center;
 }
 
 
 
-.header nav ul li ul{
-    position: absolute;
-    background: var(--dark-color-alt);
+.titulo {
+    font-size: 40px;
+    font-weight: 600;
+    line-height:60px;
+    color:rgb(66, 92, 83);
+}
+
+p {
+  font-size: 20px;
+  color:rgb(129, 122, 112); 
+  line-height: 1.8; 
+  margin-bottom: 0;
+}
+
+.topmargin-lg { margin-top: 15px; }
+.topmargin-lg { margin-top: 30px; }
+.topmargin-lg { margin-top: 60px; }
+
+.navbar {
+    background-color:rgb(142, 199, 156);
+    box-shadow: 0 2px 4px 0 rgb(0, 0, 0, .05);
+    min-height: 100px;
+}
+
+.nav-link {
+    color: black;
+    font-size: 20px;
+}
+.nav-link:hover {
+    color: black
+}
+
+#hero {
+    background-image: url('../img/home.jpg');
+    background-size: cover;
+    padding: 90px;
+    min-height: 700px;
 }
 
 
-.header nav ul li ul li{
-    width: 180px;
+.content-center {
+    max-width: 800px;
+    margin: 150 auto 60px auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+.portfolio-container {
     position: relative;
+    overflow: hidden;
+    margin: 10px o;
+    border-radius: 2px;
 }
 
-.header nav ul li ul li ul{
-    top: 0;
-    left: 180px;
+.portfolio-details {
     position: absolute;
+    bottom: 25px;
+    left: 25px; 
+    z-index: 9000;
 }
 
-.header nav ul li ul{
-    display: none;
+.portfolio-details a h2, .portfolio-details a p {
+    color: white;
 }
 
-.header nav ul li:hover > ul{
-    display: block;
+.portfolio-detalis h2:hover {
+    text-decoration: none;
 }
 
-nav div ul li{
-    display: flex;
-    justify-content: flex-end;
-    padding-left: 16rem;
-}
+@media screen and (max-width: 800px) {
+    .tit {
 
-nav div ul li a{
-    background-color: var(--dark-color-alt);
-    
-}
-
-hr{
-    color: rgb(44, 44, 44);
-}
+     }
+ }
