@@ -37,38 +37,34 @@
     
         {% for a in odss %}
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="portfolio-container">
-                    <a href="{% url 'app_objetivosonu:posts' a.pk%}">
-                            <h2 class="portf-details">Ver posts</h2>
-                    </a>
+                    <div class="portfolio-details">
+                        <a href="{% url 'app_objetivosonu:posts' a.pk%}"><img src="../../static/img/findelapobreza.jpg"class="img-fluid">                          
+                        </a>
                     </div> 
-                    <img src="../../static/img/findelapobreza.jpg"class="img-fluid">  
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="portfolio-container">
-                    <img src="../static/img/cuidar.jpg"class="img-fluid" alt="pobreza">
+                    <div class="portfolio-details">
+                        <a href="{% url 'app_objetivosonu:posts' a.pk%}"><img src="../../static/img/hambrecero.png"class="img-fluid">                          
+                        </a>
+                    </div> 
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="portfolio-container">
-                    <img src="../static/img/iguaopo.jpg"class="img-fluid" alt="portfolio 1">
+                    <img src="../../static/img/saludybienes.png"class="img-fluid">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="portfolio-container">
-                    <img src="../static/img/amigos.jpg"class="img-fluid" alt="portfolio 1">
+                    <img src="../static/img/amigos.jpg"class="img-fluid">
                 </div>
             </div>
         </div>
-        
-            <div class=>
-                <p>{{a.nombre }}</p>
-                <p>{{a.descripcion}}</p>
-            </div>
-        </a>
-    {% endfor  %}
+        {% endfor  %}
     </section>
 </main>
 {% endblock contenido %} 
