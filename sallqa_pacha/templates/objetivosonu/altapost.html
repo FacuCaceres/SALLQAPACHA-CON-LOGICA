@@ -1,11 +1,13 @@
 {% extends 'inicio.html' %}
+{% load crispy_forms_tags %}
 {% block contenido %}
-
+<section class="container">
 <form method="POST" enctype="multipart/form-data">{% csrf_token %}
-    
     {{form.erros}}
-    {{form.as_p}}
-    <input type="submit" value="Crear">
+    {{form | crispy}}
+    <div class="float-right">
+    <input type="submit" value="Crear" class="btn btn-info">
+    </div>
 </form>
-
+</section>
 {% endblock contenido %}

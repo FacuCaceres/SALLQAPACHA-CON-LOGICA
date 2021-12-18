@@ -1,71 +1,74 @@
 {% extends 'inicio.html' %}
+
 {% block contenido %}
 
-<h1>ODS</h1> <br><br><br>
-
-<a href="{% url 'inicio' %}">IR A INICIO</a>
+<body>
+   <nav class="navbar navbar-expand-lg fixed-top">
+       <div class="container">
+           <div class="name">
+           <a class="tit" href="#">SALLQA PACHA</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           </div>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                       <a class="nav-link" href="{% url 'app_acercade:boton_acercade' %}" id="quienessomos">QUIÉNES
+                           SOMOS</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="{% url 'app_objetivosonu:boton_objetivosONU' %}" id="ods">ODS</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="{% url 'app_nameforogeneral:boton_forogeneral' %}"
+                           id="forogeneral">FORO GENERAL</a>
+                   </li>
+                   <a href="{% url 'inicio' %}" class="nav-link">IR A INICIO</a>
+               </ul>
+           </div>
+       </div>
+   </nav>
 <main>
-    {% for a in odss %}
+    <section>
+        <h1>¿QUÉ SON LOS ODS?</h1>
+        <p class="parrafo">La Agenda 2030 para el Desarrollo Sostenible,  adoptada por todos los Estados Miembros de las Naciones Unidas en 2015, proporciona un plan compartido para la paz y la prosperidad para las personas y el planeta, ahora y en el futuro. En esencia, se encuentran los 17 Objetivos de Desarrollo Sostenible (ODS), que son un llamado urgente a la acción de todos los países, desarrollados y en desarrollo, en una asociación global. Reconocen que poner fin a la pobreza y otras privaciones debe ir de la mano de estrategias que mejoren la salud y la educación, reduzcan la desigualdad y estimulen el crecimiento económico, todo mientras se aborda el cambio climático y se trabaja para preservar nuestros océanos y bosques.</p>
+    
+        {% for a in odss %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="portfolio-container">
+                    <a href="{% url 'app_objetivosonu:posts' a.pk%}">
+                            <h2 class="portf-details">Ver posts</h2>
+                    </a>
+                    </div> 
+                    <img src="../../static/img/findelapobreza.jpg"class="img-fluid">  
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="portfolio-container">
+                    <img src="../static/img/cuidar.jpg"class="img-fluid" alt="pobreza">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="portfolio-container">
+                    <img src="../static/img/iguaopo.jpg"class="img-fluid" alt="portfolio 1">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="portfolio-container">
+                    <img src="../static/img/amigos.jpg"class="img-fluid" alt="portfolio 1">
+                </div>
+            </div>
+        </div>
         
-        <a href="{% url 'app_objetivosonu:posts' a.pk%}">
-            <div >
-                <p>{{a.nombre}}</p>
-                <img src="{{a.imagen.url}}" width="300px" >
+            <div class=>
+                <p>{{a.nombre }}</p>
                 <p>{{a.descripcion}}</p>
             </div>
         </a>
     {% endfor  %}
+    </section>
 </main>
-<!---<ul>
-
-    <li>
-        <a href="#">
-            <h2>Pobreza</h2>
-        </a>
-        <ul>
-            <li><a href="#">Fin de la pobreza</a></li>
-            <li><a href="#">Hambre Cero</a></li>
-        </ul>
-    </li>
-
-    <li>
-        <a href="#">
-            <h2>Educación y Trabajo</h2>
-        </a>
-        <ul>
-            <li><a href="#">Educación de calidad</a></li>
-            <li><a href="#">Trabajo decente</a></li>
-            <li><a href="#">Industria</a></li>
-            <li><a href="#">No desigualdades</a></li>
-            <li><a href="#">Ciudades sostenibles</a></li>
-        </ul>
-    </li>
-
-    <li>
-        <a href="#">
-            <h2>Cambio Climático</h2>
-        </a>
-        <ul>
-            <li><a href="#">Energía no contaminante</a></li>
-            <li><a href="#">Producción y consumo responsable</a></li>
-            <li><a href="#">Acción por el clima</a></li>
-            <li><a href="#">Vida submarina</a></li>
-            <li><a href="#">Vida ecosistemas terrestres</a></li>
-        </ul>
-    </li>
-
-    <li>
-        <a href="#">
-            <h2>Comunidad</h2>
-        </a>
-        <ul>
-            <li><a href="#">Salud y Bienestar</a></li>
-            <li><a href="#">Igualdad de género</a></li>
-            <li><a href="#">Agua limpia</a></li>
-            <li><a href="#">Paz y justicia</a></li>
-        </ul>
-    </li>
-</ul>
-</li>
-</ul> -->
-{% endblock contenido %}
+{% endblock contenido %} 

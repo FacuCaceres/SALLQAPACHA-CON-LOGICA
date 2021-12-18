@@ -1,18 +1,46 @@
 {% extends 'inicio.html' %}
-
+{% load crispy_forms_tags %}
 
 {% block contenido %}
 
-    <h1>HOLA YO SOY LA PANTALLA DE  REGISTROS AQUI PUDES REGISTRARTE</h1> <br><br><br>
-
-    <a href="{% url 'inicio' %}">IR A INICIO</a>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="name">
+            <a class="tit" href="#">SALLQA PACHA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_acercade:boton_acercade' %}" id="quienessomos">QUIÉNES
+                            SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_objetivosonu:boton_objetivosONU' %}" id="ods">ODS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_nameforogeneral:boton_forogeneral' %}"
+                            id="forogeneral">FORO GENERAL</a>
+                    </li>
+                    <a href="{% url 'inicio' %}" class="nav-link">IR A INICIO</a>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+<section class="container">
     <form action="" method="post">
         {% csrf_token %}
-        {{form.errors}}
-        {{ form.as_p }}
-        <button type="submit">guardar</button>
+        {{form.error}}
+        {{ form | crispy  }}
+    <div class="float-right">   
+    <button type="submit" class="btn btn-info">Guardar</button>
+    </div>
     </form>
-
+</section>  
 
 
 {% endblock contenido %}

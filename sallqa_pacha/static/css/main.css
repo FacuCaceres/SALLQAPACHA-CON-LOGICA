@@ -1,10 +1,12 @@
 
 body {
     font-family: 'Titillium Web', sans-serif;
+    top: 50px;
+  
 }
 
 .tit {
-    font-size: 40px;
+    font-size: 35px;
     color: rgb(53, 56, 50);
 }
 .tit:hover {
@@ -15,17 +17,23 @@ body {
 
 
 .titulo {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 600;
     line-height:60px;
     color:rgb(66, 92, 83);
+    margin-top: 200px;
+    
 }
-
 p {
   font-size: 20px;
   color:rgb(129, 122, 112); 
   line-height: 1.8; 
   margin-bottom: 0;
+  
+}
+
+section {
+    padding: 60px 100px;
 }
 
 .topmargin-lg { margin-top: 15px; }
@@ -36,6 +44,7 @@ p {
     background-color:rgb(142, 199, 156);
     box-shadow: 0 2px 4px 0 rgb(0, 0, 0, .05);
     min-height: 100px;
+    position: relative;
 }
 
 .nav-link {
@@ -44,6 +53,15 @@ p {
 }
 .nav-link:hover {
     color: black
+}
+
+.nav-link-usuario {
+    font-size: 17px;
+    color: black;
+}
+
+.nav-link-usuario:hover {
+    color: black;
 }
 
 #hero {
@@ -59,32 +77,136 @@ p {
     margin: 150 auto 60px auto;
     text-align: center;
     font-size: 20px;
+    margin: 20px 60px;
+}
+
+.content-centers {
+    max-width: 800px;
+    margin: 150 auto 60px auto;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 200px;
 }
 
 .portfolio-container {
     position: relative;
     overflow: hidden;
-    margin: 10px o;
+    margin: 10px 0;
     border-radius: 2px;
 }
 
-.portfolio-details {
-    position: absolute;
-    bottom: 25px;
-    left: 25px; 
-    z-index: 9000;
+.portfolio-container img {
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    background-size: 200px;
+    max-width: 50px;
+    margin: 150 auto 20px auto;
+    text-align: center;
 }
 
-.portfolio-details a h2, .portfolio-details a p {
+.portfolio-container:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.portfolio-details {
+    position:absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9000;
+    color:rgb(147, 173, 164);
+}
+
+.footer {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form-login {
+    margin: auto;
+    margin-top: 130px;
+    box-shadow: 7px 13px 37px black ;
+    box-sizing: border-box;
+    width: 400px;
+    height: 340px;
+    background:rgb(142, 199, 156);
+    padding: 20px 30px;
+    border-top: 4px solid rgb(75, 90, 79);
+    color: white;
+
+}
+
+.form-login h5 {
+    margin: auto;
+    text-align: center;
+    height: 40px;
+    margin-top: 30px;
+    border-top: 1px solid;
+    font-size: 20px;
+}
+
+.form-login p {
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.form-login a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-login a:hover {
+    text-decoration: underline;
     color: white;
 }
 
-.portfolio-detalis h2:hover {
-    text-decoration: none;
+
+.cuadro {
+    width: 100%;
+    border-radius: 5px;
+    border-color:rgb(75, 90, 79);
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    text-align: center;
+    font-size: 14px ;
+    font-weight: bold;
 }
 
-@media screen and (max-width: 800px) {
-    .tit {
+.buttons {
+    width: 100%;
+    height: 40px;
+    background: cornsilk;
+    border: none;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-weight: bolder;
+}
 
-     }
- }
+h1 {
+    width: auto;
+    text-align: center;
+    text-shadow: 2px 3px 9px rgb(102, 100, 100);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.parrafo {
+    font-size: 20px;
+  color:rgb(129, 122, 112); 
+  line-height: 1.8; 
+  margin-bottom: 15px;
+  margin-top: 10px;
+  text-align: justify;
+  
+}
+
+
+@media screen and (max-width: 800px) {
+    
+
+}
