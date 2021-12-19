@@ -14,7 +14,9 @@ body {
     text-decoration: none;
 }
 
-
+h1 {
+    color: black;
+}
 
 .titulo {
     font-size: 45px;
@@ -26,7 +28,7 @@ body {
 }
 p {
   font-size: 20px;
-  color:rgb(129, 122, 112); 
+  color:rgb(41, 39, 36); 
   line-height: 1.8; 
   margin-bottom: 0;
   
@@ -96,13 +98,18 @@ section {
 }
 
 .portfolio-container img {
+    width: 200px;
+    height: 200px;
+    display:flex;
+    justify-content: center;
     -moz-transition: all 0.8s;
     -webkit-transition: all 0.8s;
     transition: all 0.8s;
-    background-size: 200px;
-    max-width: 50px;
-    margin: 150 auto 20px auto;
-    text-align: center;
+    background-size: 500px;
+    max-width: 500px ;
+    margin: 50px auto 5px auto;
+    box-shadow: 5px 5px 5px 2px rgb(114, 111, 111);
+    
 }
 
 .portfolio-container:hover img {
@@ -111,13 +118,24 @@ section {
     transform: scale(1.2);
 }
 
-.portfolio-details {
-    position:absolute;
-    bottom: 25px;
-    left: 25px;
-    z-index: 9000;
-    color:rgb(147, 173, 164);
+.portfolio-container-inicio img {
+    display:flex;
+    justify-content: center;
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    background-size:200px;
+    max-width: 500px;
+    margin: 20px auto 20px auto;
+    
+    
 }
+.portfolio-container-inicio:hover img{
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
 
 .footer {
     font-size: 15px;
@@ -197,12 +215,16 @@ h1 {
 
 .parrafo {
     font-size: 20px;
-  color:rgb(129, 122, 112); 
-  line-height: 1.8; 
-  margin-bottom: 15px;
-  margin-top: 10px;
-  text-align: justify;
-  
+    color:rgb(129, 122, 112); 
+    line-height: 1.5; 
+    margin-bottom: 30px;
+    margin-top:30px;
+    text-align: justify;
+}
+
+.nombreo {
+    text-align: center;
+
 }
 
 

@@ -1,12 +1,14 @@
 {% extends 'inicio.html' %}
 
 {% block contenido %}
-<a href="{% url 'app_objetivosonu:altapost' %}">Crear un post</a>
+
+        <a href="{% url 'app_objetivosonu:altapost' %}" class="btn btn-primary btn-sm ml-auto">Crear un post</a>
+
 {% for a in p %}
     <a href="{% url 'app_objetivosonu:posteo' a.pk %}">
-        <div class="">
+        <div>
             <h1>{{a.titulo}}</h1>
-            <img src="{{a.imagen.url}}" width="200px" >
+            <img src="{{a.imagen.url}}" class="img-thumbnail">
             <p>{{a.descripcion}}</p>
             <p>{{a.fecha}}</p>
             <div>

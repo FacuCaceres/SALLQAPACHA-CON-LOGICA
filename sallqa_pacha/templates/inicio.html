@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <div class="name">
-            <a class="tit" href="#">SALLQA PACHA</a>
+            <a class="tit" href="{% url 'inicio' %}">SALLQA PACHA</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" %} id="inicio">INICIO</a>
+                        <a class="nav-link" href="{% url 'inicio' %}"
+                         %} id="inicio">INICIO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'app_acercade:boton_acercade' %}" id="quienessomos">QUIÉNES
@@ -41,10 +42,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'app_objetivosonu:boton_objetivosONU' %}" id="ods">ODS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'app_nameforogeneral:boton_forogeneral' %}"
-                            id="forogeneral">FORO GENERAL</a>
                     </li>
                     <li class="nav-link">
                         {% if user.is_authenticated %}
@@ -73,28 +70,28 @@
                     <h1 class="flexbox">¿Qué se pretende con la Agenda 2030?</h1>
                     <p>La lucha contra la pobreza</p>
                     <p>El ciudado del planeta</p>
-                    <p>La disminución delas desigualdades</p>
+                    <p>La disminución de las desigualdades</p>
                </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="portfolio-container">
+                    <div class="portfolio-container-inicio">
                         <img src="../static/img/pobreza.jpg"class="img-fluid" alt="portfolio 1">
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="portfolio-container">
-                        <img src="../static/img/cuidar.jpg"class="img-fluid" alt="portfolio 1">
+                    <div class="portfolio-container-inicio">
+                        <img src="../static/img/salud.jpg"class="img-fluid" alt="portfolio 1">
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="portfolio-container">
-                        <img src="../static/img/iguaopo.jpg"class="img-fluid" alt="portfolio 1">
+                    <div class="portfolio-container-inicio">
+                        <img src="../static/img/cuidarplaneta.jpg"class="img-fluid" alt="portfolio 1">
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="portfolio-container">
-                        <img src="../static/img/amigos.jpg"class="img-fluid" alt="portfolio 1">
+                    <div class="portfolio-container-inicio">
+                        <img src="../static/img/agua.png"class="img-fluid" alt="portfolio 1">
                     </div>
                 </div>
             </div>
