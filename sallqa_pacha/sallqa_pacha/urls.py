@@ -24,7 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Inicio, name = 'inicio'),
     #ENLACES A APPS
-    path('forogeneral/', include('apps.forogeneral.urls')),
     path('acercade/', include('apps.acercade.urls')),
     path('iniciarsesion/', include('apps.iniciarsesion.urls')),
     path('objetivosonu/', include('apps.objetivosonu.urls')),

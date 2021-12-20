@@ -2,15 +2,16 @@
 
 {% block contenido %}
 
-        <a href="{% url 'app_objetivosonu:altapost' %}" class="btn btn-primary btn-sm ml-auto">Crear un post</a>
+        <a href="{% url 'app_objetivosonu:altapost' %}" class="btn btn-primary flex-row">Crear un post</a>
 
 {% for a in p %}
+
     <a href="{% url 'app_objetivosonu:posteo' a.pk %}">
         <div>
             <h1>{{a.titulo}}</h1>
-            <img src="{{a.imagen.url}}" class="img-thumbnail">
-            <p>{{a.descripcion}}</p>
-            <p>{{a.fecha}}</p>
+                <img src="{{a.imagen.url}}">
+                <p>{{a.descripcion}}</p>
+                <p>{{a.fecha}}</p>
             <div>
                 <span> {{ object.get_like_count }}</span>
                 <span> {{ object.get_view_count }}</span>
@@ -18,6 +19,5 @@
             </div>
         </div>
     </a>
-    
 {% endfor %}
 {% endblock contenido %}
