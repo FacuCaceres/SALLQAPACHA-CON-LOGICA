@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>Sallqa Pacha</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="name">
+            <a class="tit" href="{% url 'inicio' %}">SALLQA PACHA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'inicio' %}"
+                         %} id="inicio">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_acercade:boton_acercade' %}" id="quienessomos">QUIÉNES
+                            SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_objetivosonu:boton_objetivosONU' %}" id="ods">ODS</a>
+                    </li>
+                    <li class="nav-link">
+                        {% if user.is_authenticated %}
+                        <span>Bienvenido {{ user.username }}</span>
+                        <a href="{% url 'logout' %}" class="nav-link-usuario">Cerrar Sesion</a> {% else %}
+                        <a href="{% url 'login' %}" class="nav-link-usuario">Iniciar Sesión</a>
+                        <a href="{% url 'app_registrar:boton_registrar' %}" class="nav-link-usuario">Registrarse</a> {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block contenido %}
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="content-center topmargin-lg">
+                <h1 class="titulo">EL FUTURO NO ES DESECHABLE</h1>
+                    <p class="par" >Agenda 2030- Objetivos de Desarrollo Sostenible- ONU</p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="container-fluid">
+                <div class="content-centers">
+                    <h1 class="flexbox">¿Qué se pretende con la Agenda 2030?</h1>
+                    <p class="par">La lucha contra la pobreza</p>
+                    <p class="par" >El ciudado del planeta</p>
+                    <p class="par">La disminución de las desigualdades</p>
+               </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="portfolio-container-inicio">
+                        <img src="../static/img/pobreza.jpg"class="img-fluid" alt="portfolio 1">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="portfolio-container-inicio">
+                        <img src="../static/img/salud.jpg"class="img-fluid" alt="portfolio 1">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="portfolio-container-inicio">
+                        <img src="../static/img/cuidarplaneta.jpg"class="img-fluid" alt="portfolio 1">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="portfolio-container-inicio">
+                        <img src="../static/img/agua.png"class="img-fluid" alt="portfolio 1">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% endblock contenido %}
+<!-----
+    <footer class="inicio">
+        <li>
+            {% if user.is_authenticated %}
+            <span>Bienvenido {{ user.username }}</span>
+            <a href="{% url 'logout' %}">Cerrar Sesion</a> {% else %}
+            <a href="{% url 'login' %}">Iniciar Sesión</a>
+            <a href="{% url 'app_registrar:boton_registrar' %}">Registrarse</a> {% endif %}
+        </li>
+        -->
+        <p class="footer">Todos los derechos reservados -Proyecto Sallqa Pacha- Informatorio- Chaco</p>
+       
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+        <script id="dsq-count-scr" src="//sallqa-pacha.disqus.com/count.js" async></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+ 
+ {% extends 'inicio.html' %}
+ {% block contenido %}
+ 
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="name">
+            <a class="tit" href="{% url 'inicio' %}"">SALLQA PACHA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_acercade:boton_acercade' %}" id="quienessomos">QUIÉNES
+                            SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_objetivosonu:boton_objetivosONU' %}" id="ods">ODS</a>
+                    </li>
+                    
+                    <a href="{% url 'inicio' %}" class="nav-link">IR A INICIO</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<main>
+    <section>
+        <h1>SALLQA PACHA</h1>
+            <p class="parrafo">Es un grupo de estudiantes del Curso de Desarrollo Web del Informatorio, a quienes la necesidad de colaborar con la Agenda 2030 de Objetivos de Desarrollo Sustentable, despertó un gran interés por poder ser parte activa en un futuro más próspero para nuestro Planeta y quienes lo habitan.</p> 
+            <p class="parrafo">SALLQA PACHA en Quechua significa "NATURALEZA", el lugar que habitamos, lo que nos rodea desde que somos concebidos, y que sin embargo, nos sigue asombrando, enmudeciendo, enamorando.</p>
+            <p class="parrafo" >La pérdida de biodiversidad, la desertificación, el cambio climático y la interrupción de varios ciclos naturales se encuentran entre los costos de nuestro desprecio por la naturaleza y la integridad de sus ecosistemas y procesos que sustentan la vida.</p>
+            <p class="parrafo">La Agenda 2030, a nuestro entender, propone idear un mundo nuevo que requerirá una nueva relación con la Tierra y con la propia existencia de la humanidad, y queremos proponerte que seas parte de este cambio, porque sosstenemos que entre todos, podemos realizarlo.</p>
+            <p class="parrafo">Te inivitamos a sumarte. Sé parte de este sueño!</p>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <p>INTEGRANTES</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>JUAN AGUERO-QUITILIPI</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>JOEL ENORA - RESISTENCIA</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>DANIEL VALIENTE- SAENZ PEÑA</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>ADRIEL VALLEJOS KAHMEIER- RESITENCIA</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>BRAIAN SANCHEZ- PUERTO TIROL</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>FACUNDO CÁCERES-TRES ISLETAS</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>SILVIA GONZÁLEZ- CHARATA</p>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>    
+    </section>
+</main>
+{% endblock contenido %}   
+

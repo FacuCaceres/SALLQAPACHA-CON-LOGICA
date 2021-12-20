@@ -1,0 +1,28 @@
+{% extends 'inicio.html' %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+<section>
+    
+    <a href="{% url 'app_objetivosonu:altapost' %}" class="btn btn-primary">Crear un post</a>
+    {% for a in p %}
+    <a href="{% url 'app_objetivosonu:posteo' a.pk %}" style="display:inline-block">
+    <div class="conteiner">
+        <div class="text-center">
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <h1 class="card-title">{{a.titulo}}</h1>
+                        <img src="{{a.imagen.url}}" class="img-thumbnail">
+                        <p>{{a.descripcion}}</p>
+                        <p>{{a.fecha}}</p>
+                        <div class="card-body">
+                        <span> {{ object.get_like_count }}</span>
+                        <span> {{ object.get_view_count }}</span>
+                        <span>{{ object.get_comment_count }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </a>
+</section>
+{% endfor %}
+{% endblock contenido %}

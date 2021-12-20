@@ -1,0 +1,32 @@
+{% extends 'inicio.html' %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+
+
+
+<main>
+     <section>
+          <div class="portfolio-container">
+               <h1>{{l.titulo}}</h1>
+                    <img src="{{l.imagen.url}}" width="300px">
+                    <p>{{l.descripcion}}</p>
+                    <p>{{l.cuerpo}}</p>
+                    <p>{{l.fecha}}</p>
+          </div>
+     </section>
+     <div id="disqus_thread">
+     <script>
+         (function() { // DON'T EDIT BELOW THIS LINE
+         var d = document, s = d.createElement('script');
+         s.src = 'https://sallqa-pacha.disqus.com/embed.js';
+         s.setAttribute('data-timestamp', +new Date());
+         (d.head || d.body).appendChild(s);
+         })();
+     </script>
+     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+     </div>
+</main>  
+
+{% endblock contenido %}
+
+
