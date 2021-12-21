@@ -1,0 +1,36 @@
+{% extends 'inicio.html' %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+<section>
+    
+    <!-- <a href="{% url 'app_objetivosonu:altapost' %}" class="btn btn-primary">Crear un post</a> -->
+    {% for a in p %}
+    <a href="{% url 'app_objetivosonu:posteo' a.pk %}" style="display:inline-block">
+    <div class="conteiner py-3">
+        <div class="card">
+            <div class="row">
+                <div class="col-md7 px-3">
+                <div class="card-blocl px-6" style="width: 18rem;">
+                    <h1 class="card-title">{{a.titulo}}</h1>
+                        <img src="{{a.imagen.url}}" class="img-thumbnail">
+                        <p class="card-text">Encuentra aquí los posts donde mencionamos uno de los los objetivos de la Organización Mundial de la Salud</p>
+                      </div>
+                      
+                      
+                        <p>{{a.descripcion}}</p>
+                        <p>{{a.fecha}}</p>
+                        <div class="card-body">
+                        <span> {{ object.get_like_count }}</span>
+                        <span> {{ object.get_view_count }}</span>
+                        <span>{{ object.get_comment_count }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </a>
+</section>
+  
+   
+{% endfor %}
+{% endblock contenido %}

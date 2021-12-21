@@ -1,0 +1,50 @@
+{% extends 'inicio.html' %}
+
+{% block contenido %}
+
+<body>
+   <nav class="navbar navbar-expand-lg fixed-top">
+       <div class="container">
+           <div class="name">
+           <a class="tit" href="{% url 'inicio' %}">SALLQA PACHA</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           </div>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                       <a class="nav-link" href="{% url 'app_acercade:boton_acercade' %}" id="quienessomos">QUIÉNES
+                           SOMOS</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="{% url 'app_objetivosonu:boton_objetivosONU' %}" id="ods">ODS</a>
+                   </li>
+                   <a href="{% url 'inicio' %}" class="nav-link">IR A INICIO</a>
+               </ul>
+           </div>
+       </div>
+   </nav>
+<main>
+    <section>
+        <h1>¿QUÉ SON LOS ODS?</h1>
+            <p class="parrafo">La Agenda 2030 para el Desarrollo Sostenible,  adoptada por todos los Estados Miembros de las Naciones Unidas en 2015, proporciona un plan compartido para la paz y la prosperidad para las personas y el planeta, ahora y en el futuro. En esencia, se encuentran los 17 Objetivos de Desarrollo Sostenible (ODS), que son un llamado urgente a la acción de todos los países, desarrollados y en desarrollo, en una asociación global. Reconocen que poner fin a la pobreza y otras privaciones debe ir de la mano de estrategias que mejoren la salud y la educación, reduzcan la desigualdad y estimulen el crecimiento económico, todo mientras se aborda el cambio climático y se trabaja para preservar nuestros océanos y bosques.</p>
+            <div class="conteiner">
+                <div class="row hidden-md-up">
+                    {% for a in odss %}
+                    <div class="col-4">
+                        <div class="card" style="width: 25rem;">
+                            <a href="{% url 'app_objetivosonu:posts' a.pk%}"> 
+                            <p>{{a.nombre }}</p>
+                            <img src="{{a.imagen.url}}" width="300px" class="content-center">
+                            <p>{{a.descripcion}}</p>
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor  %}
+                </div>
+            </div>
+    </section>
+</main>
+{% endblock contenido %} 

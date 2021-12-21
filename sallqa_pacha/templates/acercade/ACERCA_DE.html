@@ -1,0 +1,130 @@
+ 
+ {% extends 'inicio.html' %}
+ {% block contenido %}
+ <head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+ 
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="name">
+            <a class="tit" href="{% url 'inicio' %}"">SALLQA PACHA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_acercade:boton_acercade' %}" id="quienessomos">QUIÉNES
+                            SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_objetivosonu:boton_objetivosONU' %}" id="ods">ODS</a>
+                    </li>
+                    
+                    <a href="{% url 'inicio' %}" class="nav-link">IR A INICIO</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<main>
+    <section>
+        <h1>SALLQA PACHA</h1>
+            <p class="parrafo">Es un grupo de estudiantes del Curso de Desarrollo Web del Informatorio, a quienes la necesidad de colaborar con la Agenda 2030 de Objetivos de Desarrollo Sustentable, despertó un gran interés por poder ser parte activa en un futuro más próspero para nuestro Planeta y quienes lo habitan.</p> 
+            <p class="parrafo">SALLQA PACHA en Quechua significa "NATURALEZA", el lugar que habitamos, lo que nos rodea desde que somos concebidos, y que sin embargo, nos sigue asombrando, enmudeciendo, enamorando.</p>
+            <p class="parrafo" >La pérdida de biodiversidad, la desertificación, el cambio climático y la interrupción de varios ciclos naturales se encuentran entre los costos de nuestro desprecio por la naturaleza y la integridad de sus ecosistemas y procesos que sustentan la vida.</p>
+            <p class="parrafo">La Agenda 2030, a nuestro entender, propone idear un mundo nuevo que requerirá una nueva relación con la Tierra y con la propia existencia de la humanidad, y queremos proponerte que seas parte de este cambio, porque sosstenemos que entre todos, podemos realizarlo.</p>
+            <p class="parrafo">Te inivitamos a sumarte. Sé parte de este sueño!</p>
+
+
+            <div class="team-boxed">
+              <div class="container">
+                  <div class="intro">
+                      <h2 class="text-center">GRUPO 06 </h2>
+                      <p class="text-center">Informatorio - Chaco 2021.</p>
+                  </div>
+                  <div class="row people">
+                      <div class="col-md-6 col-lg-4 item">
+                          <div class="box"><img width="110rem" class="rounded-circle" src="../../static/img/cards/juan.png">
+                              <h3 class="name">Juan Agüero</h3>
+                              <p class="title">Quitilipi</p>
+                              <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                              <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                          </div>
+                      </div>
+
+                      <div class="col-md-6 col-lg-4 item">
+                        <div class="box"><img width="110rem" class="rounded-circle" src="../../static/img/cards/joel.jpeg">
+                            <h3 class="name">Joel Enora</h3>
+                            <p class="title">Resistencia</p>
+                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        </div>
+                    </div>
+      
+                    <div class="col-md-6 col-lg-4 item">
+                      <div class="box"><img width="110rem" class="rounded-circle" src="../../static/img/cards/silvia.jpeg">
+                          <h3 class="name">Silvia González</h3>
+                          <p class="title">Charata</p>
+                          <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                          <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                      </div>
+                  </div>
+                    
+
+                  <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img width="110rem" class="rounded-circle" src="../../static/img/cards/adriel.jpg">
+                        <h3 class="name">Adriel Vallejos Kahmeier</h3>
+                        <p class="title">Resistencia</p>
+                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+
+               
+                <div class="col-md-6 col-lg-4 item">
+                  <div class="box"><img width="110rem" height="110rem" class="rounded-circle" src="../../static/img/cards/facundo.jpeg">
+                      <h3 class="name">Facundo Cáceres</h3>
+                      <p class="title">Tres Isletas</p>
+                      <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                      <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                  </div>
+              </div>
+
+              
+                <div class="col-md-6 col-lg-4 item">
+                  <div class="box"><img width="110rem" height="110rem" class="rounded-circle" src="../../static/img/cards/braian.jpeg">
+                      <h3 class="name">Braian Sanchez</h3>
+                      <p class="title">Puerto Tirol</p>
+                      <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                      <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                  </div>
+              </div>
+
+
+              <div class="col-md-6 col-lg-4 item">
+                <div class="box"><img width="110rem" class="rounded-circle" src="../../static/img/cards/perfil.png">
+                    <h3 class="name">Daniel Valiente</h3>
+                    <p class="title">Saenz Peña</p>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                    <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+
+
+  
+    </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+{% endblock contenido %}   
+
